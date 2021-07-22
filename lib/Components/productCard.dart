@@ -21,7 +21,7 @@ class _ProductCardState extends State<ProductCard> {
 
   @override
   Widget build(BuildContext context) {
-    CartNotifier cartNotifier = Provider.of<CartNotifier>(context);
+    // CartNotifier cartNotifier = Provider.of<CartNotifier>(context);
     return Stack(alignment: Alignment.topRight, children: [
       Card(
         elevation: 10,
@@ -78,9 +78,12 @@ class _ProductCardState extends State<ProductCard> {
           height: 40,
           child: FloatingActionButton(
               onPressed: () => {
-                    if (!cartNotifier.cartList.contains(widget.product))
+                    if (!context
+                        .read<CartNotifier>()
+                        .cartList
+                        .contains(widget.product))
                       {
-                        cartNotifier.addProduct(widget.product),
+                        context.read<CartNotifier>().addProduct(widget.product),
                         Fluttertoast.showToast(
                             msg: "Product Added to Cart",
                             toastLength: Toast.LENGTH_SHORT,
