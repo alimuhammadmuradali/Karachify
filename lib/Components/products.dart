@@ -1,23 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:karachify/models/productModel.dart';
 
-class Product {
-  final int? id;
-  final String? title, description;
-  final String? image;
-  final double? price;
-
-  Product(
-      {@required this.id,
-      @required this.image,
-      @required this.title,
-      @required this.price,
-      @required this.description});
-}
-
-// Our demo Products
-
-List<Product> products = [
-  Product(
+List<productModel> products = [
+  productModel(
     id: 1,
     image: "assets/images/shirt.jpg",
     title: "Shirt",
@@ -25,7 +9,7 @@ List<Product> products = [
     description:
         "Dressing is a way of life. Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including printed shirts",
   ),
-  Product(
+  productModel(
     id: 2,
     image: "assets/images/pant1.jpg",
     title: "Man Pant",
@@ -33,7 +17,7 @@ List<Product> products = [
     description:
         "Dressing is a way of life. Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including printed shirts",
   ),
-  Product(
+  productModel(
     id: 3,
     image: "assets/images/shirt2.jpg",
     title: "Shirt",
@@ -41,7 +25,7 @@ List<Product> products = [
     description:
         "Dressing is a way of life. Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including printed shirts",
   ),
-  Product(
+  productModel(
     id: 4,
     image: "assets/images/pant2.jpg",
     title: "Pant",
@@ -49,7 +33,7 @@ List<Product> products = [
     description:
         "Dressing is a way of life. Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including printed shirts",
   ),
-  Product(
+  productModel(
     id: 5,
     image: "assets/images/pant3.jpg",
     title: "Pant",
@@ -58,4 +42,3 @@ List<Product> products = [
         "Dressing is a way of life. Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including printed shirts",
   ),
 ];
-List<Product> CartProduct = [];

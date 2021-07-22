@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:karachify/Components/products.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:karachify/models/productModel.dart';
+import 'package:karachify/provider/cart_notifier.dart';
+import 'package:provider/provider.dart';
 
 class ProductCard extends StatefulWidget {
-  final Product product;
+  final productModel product;
   const ProductCard({
     Key? key,
     required this.product,
@@ -18,6 +21,7 @@ class _ProductCardState extends State<ProductCard> {
 
   @override
   Widget build(BuildContext context) {
+    CartNotifier cartNotifier = Provider.of<CartNotifier>(context);
     return Stack(alignment: Alignment.topRight, children: [
       Card(
         elevation: 10,
@@ -74,10 +78,9 @@ class _ProductCardState extends State<ProductCard> {
           height: 40,
           child: FloatingActionButton(
               onPressed: () => {
-                    setState(() {
-                      if (!CartProduct.contains(widget.product)) {
-                        CartProduct.add(widget.product);
-                        print(CartProduct);
+                    if (!cartNotifier.cartList.contains(widget.product))
+                      {
+                        cartNotifier.addProduct(widget.product),
                         Fluttertoast.showToast(
                             msg: "Product Added to Cart",
                             toastLength: Toast.LENGTH_SHORT,
@@ -85,9 +88,8 @@ class _ProductCardState extends State<ProductCard> {
                             timeInSecForIosWeb: 1,
                             backgroundColor: Colors.blue,
                             textColor: Colors.white,
-                            fontSize: 13.0);
+                            fontSize: 13.0),
                       }
-                    })
                   },
               child: Icon(
                 Icons.add,
