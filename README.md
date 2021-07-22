@@ -1,16 +1,10 @@
 # karachify
 
-A new Flutter project.
 
-## Getting Started
+Few Points to note
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1- watch rebuilds entire widget tree if extend with Consumerwidget of change in provider.
+2- selext rebuilds entire widget tree if particular datatype is changed on change of provider with specific data type.
+3-using consumer for particular widget rebults the specific widget only of change in provider.
+4-2-using consumer for particular widget rebults the specific widget only on change of provider with specific data type.
