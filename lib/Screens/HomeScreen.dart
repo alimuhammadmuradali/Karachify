@@ -35,11 +35,13 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 SizedBox(height: 20),
                 DiscountBanner(),
-                ScrollableProducts("Popular Products"),
+                ScrollableProducts(
+                  title: 'Popular Products',
+                ),
                 SizedBox(height: 30),
-                ScrollableProducts("Top Sales"),
+                ScrollableProducts(title: "Top Sales"),
                 SizedBox(height: 30),
-                ScrollableProducts("Most Viewed"),
+                ScrollableProducts(title: "Most Viewed"),
                 SizedBox(height: 30),
               ],
             ),

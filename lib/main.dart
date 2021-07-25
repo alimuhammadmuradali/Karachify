@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:karachify/Screens/SplashScreen.dart';
-import 'package:karachify/provider/cart_notifier.dart';
+import 'package:karachify/view_models/cart_notifier.dart';
+import 'package:karachify/view_models/product_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(create: (_) => CartNotifier(), child: MyApp()));
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => CartNotifier()),
+      ChangeNotifierProvider(create: (_) => ProductNotifier()),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

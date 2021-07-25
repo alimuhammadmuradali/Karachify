@@ -1,0 +1,41 @@
+[
+  {
+    "_id": "60fafb90e73eeb1e0884b9ca",
+    "title": "Shirt1",
+    "price": 750,
+    "image":"photo_60fafb90e73eeb1e0884b9ca.jpg",
+    "description":
+    "Dress yourself with our including printed shirts"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449ce096",
+    "title": "Man Pant black",
+    "price": 50.5,
+    "image":"photo_5d7a514b5d2c12c7449ce096.jpg",
+    "description":
+      "Dress yourself with our elegant shi a wide range of shirts collection including printed shirts"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449ce097",
+    "title": "Shirt2",
+    "price": 600,
+    "image":"photo_5d7a514b5d2c12c7449ce097.jpg",
+    "description":
+    "Dress yourself with our elegant shirts collection.We have a wide range of shirts collection including p"},
+  {
+    "_id": "5d7a514b5d2c12c7449ce098",
+    "title": "Pant1",
+    "price": 900,
+    "image":"photo_5d7a514b5d2c12c7449ce098.jpg",
+    "description":
+    "Dress yourself with oun.We have a wide range of shirts collection including printed shirts"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449ce099",
+    "title": "Pant2",
+    "price": 700,
+    "image":"photo_5d7a514b5d2c12c7449ce099.jpg",
+    "description":
+    "Dress yourself with our elegant shirts collection. including printed shirts"
+  }
+]

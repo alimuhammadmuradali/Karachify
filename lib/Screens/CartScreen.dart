@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:karachify/provider/cart_notifier.dart';
+import 'package:karachify/view_models/cart_notifier.dart';
 import 'package:provider/provider.dart';
 
 class cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print("user list rebuilt");
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(title: Center(child: Text("Your Cart")), actions: <Widget>[
@@ -45,7 +44,7 @@ class cart extends StatelessWidget {
                             context.read<CartNotifier>().deleteProduct(index);
                           },
                           child: ListTile(
-                            leading: Image.asset(context
+                            leading: Image.network(context
                                 .watch<CartNotifier>()
                                 .cartList[index]
                                 .image!),

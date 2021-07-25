@@ -1,8 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:karachify/Components/products.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:karachify/models/productModel.dart';
-import 'package:karachify/provider/cart_notifier.dart';
+import 'package:karachify/view_models/cart_notifier.dart';
 import 'package:provider/provider.dart';
 
 class ProductCard extends StatefulWidget {
@@ -21,7 +22,6 @@ class _ProductCardState extends State<ProductCard> {
 
   @override
   Widget build(BuildContext context) {
-    // CartNotifier cartNotifier = Provider.of<CartNotifier>(context);
     return Stack(alignment: Alignment.topRight, children: [
       Card(
         elevation: 10,
@@ -29,6 +29,7 @@ class _ProductCardState extends State<ProductCard> {
           padding: EdgeInsets.all(8),
           child: SizedBox(
               width: width,
+              height: 235,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -39,7 +40,7 @@ class _ProductCardState extends State<ProductCard> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Image.asset(widget.product.image!),
+                      child: Image.network(widget.product.image!),
                     ),
                   ),
                   const SizedBox(height: 10),
